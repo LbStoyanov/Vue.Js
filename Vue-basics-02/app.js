@@ -22,9 +22,12 @@ const app = Vue.createApp({
     decreaseCounter(){
       this.counter--;
     },
-    setName(event, lastName){
+    setName(event){
       
-      this.name = event.target.value + ' ' + lastName;
+      this.name = event.target.value;
+    },
+    resetInput(){
+      this.name = '';
     }
   }
 });
