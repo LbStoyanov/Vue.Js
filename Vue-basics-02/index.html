@@ -18,7 +18,8 @@
     </header>
     <section id="events">
       <h2>Events in Action</h2>
-      <button v-on:click="increaseCounter">Add</button>
+      <button @click="increaseCounter">Add</button>
+      <!-- @click is the shortcut for v-on:click, provided from Vue -->
       <button v-on:click="decreaseCounter">Reduce</button>
       <!-- <p v-once>Starting Counter:{{counter}}</p> -->
       <p>Result: {{ counter }}</p>
