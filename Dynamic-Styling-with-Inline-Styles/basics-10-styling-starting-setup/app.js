@@ -8,6 +8,7 @@ const app = Vue.createApp({
     },
     methods:{
         boxSelected(box){
+            debugger;
             if (box === 'A') {
                 this.boxASelected = true;
             }else if (box === 'B') {
@@ -15,7 +16,7 @@ const app = Vue.createApp({
             }else if (box === 'C') {
                 this.boxCSelected = true;
             }
-        }
+        },
     }
 });
 
