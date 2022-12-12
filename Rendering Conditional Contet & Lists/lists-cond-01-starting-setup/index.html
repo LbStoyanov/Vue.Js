@@ -21,18 +21,25 @@
       <input type="text" v-model="enteredGoalValue" />
       <button @click="addGoal">Add Goal</button>
       <!-- This paragraph will appears, ONLY if we have truty value!!! -->
-      <p v-if="goals.length === 0">No goals have been added yet - please start adding some!</p>
+      <p v-if="goals.length === 0">
+        No goals have been added yet - please start adding some!
+      </p>
       <!-- This v-else directive can be used ONLY in case that the upper element has if statement!!! -->
 
-      <ul v-else>
-        <!-- Loop through an array, if goals is array -->
-        <li v-for="goal in goals">{{goal}}</li>
+       <ul v-else>
+        Loop through an array, if goals is array
+        <li v-for="(goal, index) in goals" @click="removeGoal(index)">{{goal}}</li>
       </ul>
 
-      <ul v-else>
-        <!-- Second parameter can be add,whos role will be an indexer -->
+      <!-- <ul v-else>
+        Loop through an array, if goals is array
+        <li v-for="goal in goals">{{goal}}</li>
+      </ul> -->
+
+      <!--     <ul v-else>
+        Second parameter can be add,whos role will be an indexer
         <li v-for="(goal, index) in goals">{{goal}} - {{index}}</li>
-      </ul>
+      </ul> -->
 
     </section>
   </body>
