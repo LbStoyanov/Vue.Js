@@ -21,12 +21,25 @@ const app = Vue.createApp({
             return this.currentRound % 3 !== 0;
         }
     },
+    watch: {
+        /* The name of the watchers should be exactly the same as the properties in the data you want to follow */
+        playerHealth(value){
+            if (value <= 0 && this.monsterHealth <=0) {
+                
+            }
+        },
+        monsterHealth(value){}
+    },
     methods: {
         attackMonster(){
             this.currentRound++;
             const attackValue = getRandomValue(5,12);
             this.monsterHealth -= attackValue;
             this.attackPlayer();
+
+            if (this.playerHealth < 0) {
+                
+            }
         },
         attackPlayer(){
             const attackValue = getRandomValue(8,15);
@@ -43,15 +56,16 @@ const app = Vue.createApp({
             this.playerHealth -= attackValue;
         },
         healPlayer(){
+            this.currentRound++;
             const healValue = getRandomValue(8,20);
-            
+
             if (this.playerHealth + healValue > 100) {
                 this.playerHealth = 100;
             }else{
                 this.playerHealth += healValue;
             }
 
-            
+            this.attackPlayer();
         }
     }
 });
