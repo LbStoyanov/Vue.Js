@@ -8,6 +8,7 @@ const app = Vue.createApp({
             monsterHealth: 100,
             playerHealth: 100,
             currentRound: 0,
+            winner: null
         };
     },
     computed: {
@@ -25,10 +26,22 @@ const app = Vue.createApp({
         /* The name of the watchers should be exactly the same as the properties in the data you want to follow */
         playerHealth(value){
             if (value <= 0 && this.monsterHealth <=0) {
-                
+                //A draw
+                this.winner = 'draw';
+            }else if(value <= 0){
+                //Player lost
+                this.winner = 'monster';
             }
         },
-        monsterHealth(value){}
+        monsterHealth(value){
+            if (value <= 0 && this.playerHealth <=0) {
+                //A draw  
+                this.winner = 'draw';
+            }else if(value <= 0){
+                //Monster lost
+                this.winner = 'player';
+            }
+        }
     },
     methods: {
         attackMonster(){
