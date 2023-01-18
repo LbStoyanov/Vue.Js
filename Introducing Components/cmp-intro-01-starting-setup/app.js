@@ -1,6 +1,8 @@
-const app= Vue.CreateApp({
+const app = Vue.createApp({
     data(){
         return{
+            detailsAreVisible: false,
+
             friends: [{
                 id: 'Peshko',
                 name: 'Peshko Dobriq',
@@ -15,7 +17,7 @@ const app= Vue.CreateApp({
             },
             {
                 id: 'Mishko',
-                name: 'MIshko Sredniq',
+                name: 'Mishko Sredniq',
                 phone: '5645645645456',
                 email: 'Peshko@Dobriq.com',
             },
@@ -24,7 +26,11 @@ const app= Vue.CreateApp({
         ],
         }
     },
-    methods:{},
+    methods:{
+        toggleDetails(){
+            this.detailsAreVisible = !this.detailsAreVisible;
+        }
+    },
 });
 
-app.nount('#app')
+app.mount('#app')
