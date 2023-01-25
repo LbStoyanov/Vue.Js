@@ -1,13 +1,20 @@
 <template>
-    <header><h1>My Friends</h1></header>
-    <ul>
-        <friend-contact></friend-contact>
-        <friend-contact></friend-contact>
-    </ul>
+  <header><h1>My Friends</h1></header>
+  <ul>
+    <friend-contact
+      name="Chichi"
+      phone-number="21222221d21212"
+      email-address="pesho@kotva.com"
+    ></friend-contact>
+    <friend-contact
+      name="Chichi Barmana"
+      phone-number="21222221d21212"
+      email-address="chichi@kotva.com"
+    ></friend-contact>
+  </ul>
 </template>
 
 <script>
-
 export default {
   data() {
     return {
@@ -18,27 +25,20 @@ export default {
           phone: "1545454545454554",
           email: "manu@abv.com",
         },
-        {
-          id: "Konchev",
-          name: "Manuel Konchev",
-          phone: "1545454545454554",
-          email: "konchev@abv.com",
-        },
       ],
     };
   },
 };
 </script>
 
-
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-family: 'Jost', sans-serif;
+  font-family: "Jost", sans-serif;
 }
 
 body {
@@ -96,6 +96,4 @@ header {
   border-color: #ec3169;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.26);
 }
-
-
 </style>

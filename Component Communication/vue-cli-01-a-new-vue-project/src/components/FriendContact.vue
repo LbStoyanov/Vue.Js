@@ -1,22 +1,27 @@
 <template>
   <li>
-    <h2>{{ friend.name }}</h2>
+    <h2>{{ name }}</h2>
     <button @click="toggleDetails">{{ detailsAreVisible ? 'Hide' : 'Show' }} Details</button>
     <ul v-if="detailsAreVisible">
-      <li><strong>Phone:</strong> {{ friend.phone }}</li>
-      <li><strong>Email:</strong> {{ friend.email }}</li>
+      <li><strong>Phone:</strong> {{ phoneNumber }}</li>
+      <li><strong>Email:</strong> {{ emailAddress }}</li>
     </ul>
   </li>
 </template>
 
 <script>
 export default {
+  porps:[
+    'name',
+    'phoneNumber',
+    'emailAddress'
+  ],
   data() {
     return {
       detailsAreVisible: false,
       friend: {
         id: "Manuel",
-        name: "Manuel Lorenzo",
+        personName: "Manuel Lorenzo",
         phone: "1545454545454554",
         email: "manu@abv.com",
       },
@@ -25,6 +30,7 @@ export default {
   methods: {
     toggleDetails() {
         this.detailsAreVisible = !this.detailsAreVisible;
+        //this.phoneNumber
     }
   }
 };
