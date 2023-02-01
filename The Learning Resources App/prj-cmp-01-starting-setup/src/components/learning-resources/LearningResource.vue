@@ -3,9 +3,8 @@
     <base-card>
       <header>
         <h3>{{ title }}</h3>
-        <button>Delete</button>
+        <base-button >Delete</base-button>
       </header>
-      
       <p>{{ description }}</p>
       <nav>
         <a :href="link">View Resource</a>
@@ -21,7 +20,7 @@ export default {
 </script>
 
 <style scoped>
-    li {
+li {
   margin: auto;
   max-width: 40rem;
 }
