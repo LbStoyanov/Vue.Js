@@ -1,15 +1,19 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <HelloSign></HelloSign>
   </div>
 </template>
 
 <script>
+import HelloSign from './HelloSign.vue';
+
 export default {
-  name: 'HelloWorld',
-  props: {
-    msg: String
-  }
+    name: "HelloWorld",
+    props: {
+        msg: String
+    },
+    components: { HelloSign }
 }
 </script>
 
