@@ -5,6 +5,8 @@
 </template>
 
 <script>
+import * as DropboxSign from "@dropbox/sign";
+
     export default {
         data(){
             return {
@@ -14,6 +16,8 @@
         methods:{
             getAccountInfo(){
                     console.log('Test');
+                    const accountApi = new DropboxSign.AccountApi();
+                    accountApi.username = "YOUR_API_KEY";
             }
         }
     }
