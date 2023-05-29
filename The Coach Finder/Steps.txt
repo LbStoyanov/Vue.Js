@@ -1,0 +1,5 @@
+Create main js.
+Create app js.
+Create components folder
+Create router js.
+Import all the components into the router.
