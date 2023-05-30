@@ -1,18 +1,17 @@
 <template>
-    <header>
-        <nav>
-            <h1><router-link to="/">Find a Coach</router-link></h1>
-            <ul>
-                <li><router-link to="/coaches">All Coaches</router-link></li>
-                <li><router-link to="/requests">Requests</router-link></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <nav>
+      <h1><router-link to="/">Find a Coach</router-link></h1>
+      <ul>
+        <li><router-link to="/coaches">All Coaches</router-link></li>
+        <li><router-link to="/requests">Requests</router-link></li>
+      </ul>
+    </nav>
+  </header>
 </template>
 
-
 <style scoped>
-    header a {
+header a {
   text-decoration: none;
   color: #f391e3;
   display: inline-block;
