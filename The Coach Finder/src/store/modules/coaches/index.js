@@ -3,7 +3,14 @@ import actions from './actions.js';
 import getters from './getters.js';
 
 export default {
-    state(){},
+    namespaced: true,
+    state(){
+        return{
+            coaches:[
+                
+            ]
+        };
+    },
     mutations,
     actions,
     getters
